@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<title>Let's Learn Cryptography</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+    height: 100%;
+    font-family: "Inconsolata", sans-serif;
+}
+.bgimg {
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://www.investinblockchain.com/wp-content/uploads/2018/02/cryptography-e1522400331938.jpg");
+    min-height: 75%;
+}
+.menu {
+    display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#what" class="w3-button w3-block w3-black">WHAT IS IT?</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">CIPHERS</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#trivia" class="w3-button w3-block w3-black">TRIVIA</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with the image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">Let's learn <br>Cryptography</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">By: Estefanie A.</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- What is it? -->
+<div class="w3-container" id="what">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">WHAT DOES CRYPTOGRAPHY EVEN MEAN?</span></h5>
+    <p>Cryptography involves creating written or generated codes that allow information to be kept secret. Cryptography converts data into a format that is unreadable for an unauthorized user, allowing it to be transmitted without unauthorized entities decoding it back into a readable format, thus compromising the data.If you want to learn what Cryptography is and classic cryptosystems then this page is here to help you learn. It will show you how cryptography works and the different applications of the topic. Study the overview given below with the help of some informative videos. When you feel that you know the material well enough and are ready to start the trivia game then click the TRIVIA tab on the menu above to start the game.</p>
+  
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Asymmetric_encryption_%28colored%29.png" style="width:100%;max-width:1000px" class="w3-margin-top">
+  </div>
+</div>
+
+<!-- Cipher Menu Box -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">CLASSIC CRYPTOSYSTEMS</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'CIP');" id="myLink">
+        <div class="w3-col s6 tablink">CIPHERS</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'video');">
+        <div class="w3-col s6 tablink">VIDEOS</div>
+        <!-- For videos try to find link if they dont fit-->
+      </a>
+    </div>
+
+    <div id="CIP" class="w3-container menu w3-padding-48 w3-card">
+      <h5>How did Cryptography begin?</h5>
+      <p class="w3-text-grey">Cryptography was first known when they found an inscription carved around 1900 BC, in the main chamber of the tomb of the nobleman Khnumhotep II, in Egypt. The scribe used some unusual hieroglyphic symbols here and there in place of more ordinary ones. They say that the purpose was not to hide the message but perhaps to change its form in a way which would made it appear dignified. Though the inscription was not a form of secret writing, but incorporated some sort of transformation of the original text. This was the oldest known text to do so. Evidence of some use of cryptography has been seen in most major early civilizations.The very word cryptography has Greek origins. “Kryptos” means hidden and “Graphein” – word</p><br>
+
+
+      <h5>Shift Cipher</h5>
+      <p class="w3-text-grey">Around 100 BC, Julius Caesar was known to use a form of encryption to convey secret messages to his army generals posted in the war front. This is one of the earliest known and simplest ciphers.It is a type of substitution cipher in which each letter in the plaintext is 'shifted' a certain number of places down the alphabet. For example, with a shift of 2, A would be replaced by C, B would become D, and so on. <strong><br>Formula:</strong> For each plain text letter, substitute the cipher text letter C: then C = E(3,p)=(p+3) mod 26 <br> A shift may be of any amount, so that general Caesar algorithm is C =E(k,p)=(p+k) mod 26 <br> Where k takes on a value in the range 1 to 25. The decryption algorithm is simply P=D(k,C)=(C-k) mod 26
+      </p><br>
+      
+      <h5>One-Time Pads</h5>
+      <p class="w3-text-grey"> The OTP cipher was first described by Frank Miller in 1882, and was re-invented in 1917. In cryptography, a one-time pad is a system in which a private key generated randomly is used only once to encrypt a message that is then decrypted by the receiver using a matching one-time pad and key. Messages encrypted with keys based on randomness have the advantage that there is theoretically no way to "break the code" by analyzing a succession of messages. Each encryption is unique and bears no relation to the next encryption so that some pattern can be detected.<br>
+      <strong>Formula:</strong> Encryption: Plaintext + Key = Ciphertext => (m+k) mod 26<br>
+      Decryption: M = (c-k+26) mod 26</p><br>
+    
+      <h5>Affine Ciphers</h5>
+      <p class="w3-text-grey">The affine cipher is a type of monoalphabetic substitution cipher, where in each letter in an alphabet is mapped to its numeric equivalent, encrypted using a simple mathematical function, and converted back to a letter. The formula used means that each letter encrypts to one other letter, and back again, meaning the cipher is essentially a standard substitution cipher with a rule governing which letter goes to which. As such, it has the weaknesses of all substitution ciphers. Each letter is enciphered with the function (ax + b) mod 26, where b is the magnitude of the shift.<br>
+      <strong>Formula:</strong> Encryption: E(x) = (ax+b)mod m, where modulus m i sthe size of the the alphabet and a and b are the key of the cipher. <br>
+      Decryption: D(x) = a<sup>-1</sup>(x-b) mod m, where a<sup>-1</sup> is the modular multiplicative inverse of a modulo m.</p><br>
+    
+      <h5>The Vigenere Cipher
+</h5>
+      <p class="w3-text-grey"> In the 16th century, Vigenere designed a cipher that was supposedly the first cipher which used an encryption key.This cipher uses a 26×26 table with A to Z as the row heading and column heading This table is usually referred to as the Vigenère Tableau, Vigenère Table or Vigenère Square. The first row of this table has the 26 English letters. Starting with the second row, each row has the letters shifted to the left one position in a cyclic way. For example, when B is shifted to the first position on the second row, the letter A moves to the end.<br>
+      <strong>Formula:</strong> The encryption E using the key K can be written as C = E<sub>k</sub>(M) = (M + K) mod 26 <br>
+      Decryption D using key K as M = D<sub>k</sub>(C - K) mod 26</p><br>
+    
+      <h5>Substitution Ciphers
+</h5>
+      <p class="w3-text-grey">In cryptography, a substitution cipher is a method of encrypting by which units of plaintext are replaced with ciphertext, according to a fixed system; the "units" may be single letters, pairs of letters, triplets of letters, mixtures of the above, and so forth.</p>
+    </div>
+
+    <div id="video" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Shift Video</h5>
+      <p class="w3-text-grey">Link</p><br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/o6TPx1Co_wg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h5>One-Time Pads</h5>
+      <p class="w3-text-grey">Link</p><br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/vEbaF1jmbcM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+      <h5>Affline Ciphers</h5>
+      <p class="w3-text-grey">Link</p><br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/zeqJBCuZYAw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+      <h5>Vigenere Cipher</h5>
+      <p class="w3-text-grey">Link</p><br>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/SkJcmCaHqS0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+      <h5>Substitution Cipher</h5>
+      <p class="w3-text-grey">Link</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/1P8Xpxm76e8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>  
+    <img src="https://images-eu.ssl-images-amazon.com/images/I/510e4IPl5pL.png" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="trivia" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">LET'S PLAY SOME CRYPTO TRIVIA!</span></h5>
+    
+    <img src="https://www.ignitesocialmedia.com/wp-content/uploads/2018/02/YpJilaXXT8qJR6HQVKFM_ISM_Trivia.gif" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">HOW TO PLAY:</span> Can you master classic crypto systems? Let's find out!Start by pressing enter and reading each question carefully. Once you begin and you feel you can answer each question begin answering if "true" or "false" and click enter to submit. Good luck, you'll need it!</p>
+    <p><strong>Calculator</strong> Use the calculator to solve the hard problems!</p>
+<!--Game-->
+LET'S PLAY TRIVIA (T OR F)
+        <br />
+
+        Question <span id="NumberAsked">1</span> of 12 with <span id="NumberCorrect">0</span> correct answers! WOOT!</p>
+
+    <p>
+        <span id="TriviaQuestion">???</span>
+    </p>
+    <p>
+        &nbsp;
+        <input id="RadioTrue" type="radio" value="true" name="answer" checked="checked" /> True
+        &nbsp;&nbsp;&nbsp;
+        <input id="RadioFalse" type="radio" value="false" name="answer" /> False
+    </p>
+    <p>
+        <input id="ButtonContinue" onclick="checkAnswer();" type="button" value="continue" />
+    </p>
+    <script language="javascript" type="text/javascript">
+        // Array trivia data
+
+        var TriviaData = new Array(12)
+        createTwoDimensionalArray(3);
+        // Variables to track : # questions asked, current correct total and current question
+        var questionsAsked = 0;
+        var totalCorrect = 0;
+        var currentQuestion = 0;
+        var selectionValid = false;
+
+        // Questions
+        TriviaData[0][0] = "The affine cipher is a type of monoalphabetic substitution cipher.";
+
+        TriviaData[1][0] = "Solving this plain-text: 'ENIGMA' with OTP and encrypting it with keyword : 'KEYWORD' the end encryption is ORGCAR.";
+
+        TriviaData[2][0] = "Using the Ceaser Cipher with shift 4 would encryt this message as: ABCD -->CDEF";
+
+        TriviaData[3][0] = "There are 2 parts to any encryption system: the algorithm for doing the transformation and a secret piece of information that specifies the particular transformation (called the key).";
+
+        TriviaData[4][0] = "The earliest practice of Cryptography was found in 1000BC";
+
+        TriviaData[5][0] = "Julius Caesar used encryption in the days of the Roman Empire to cipher letters and messages. Generally, encryption played an important role in many wars and in military circles throughout the years.";
+
+        TriviaData[6][0] = "In most cipher formulas used to decrypt its mod 26 because of the amount of letters in the alphabet.";
+
+        TriviaData[7][0] = "The word cryptography has Egyption origins. “Kryptos” means hidden and “Graphein” – word";
+
+        TriviaData[8][0] = "The oldest encryption attempt known to mankind dates back to the kingdom of Egypt, around two thousand years before Christ. The ciphers are found on the tomb of Khnumhotep II.";
+
+        TriviaData[9][0] = "Using the affine cipher the encryption of the word MATHS is LBGWD.";
+
+        TriviaData[10][0] = "Currently, encryption is the most practical and easy way to protect electronically stored, processed or transmitted data.";
+
+        TriviaData[11][0]= "Encryption is a term that comes from the science of cryptography. It includes the coding and decoding of messages in order to protect their contents.";
+   
+
+        // Answers
+        TriviaData[0][1] = "true";
+
+        TriviaData[1][1] = "true";
+
+        TriviaData[2][1] = "false";
+
+        TriviaData[3][1] = "true";
+
+        TriviaData[4][1] = "false";
+
+        TriviaData[5][1] = "true";
+
+        TriviaData[6][1] = "true";
+
+        TriviaData[7][1] = "false";
+
+        TriviaData[8][1] = "true";
+
+        TriviaData[9][1] = "true";
+
+        TriviaData[10][1]= "true";
+
+        TriviaData[11][1]= "true";
+
+        // Has question been asked because we are asking in random order
+
+        TriviaData[0][2] = "no";
+
+        TriviaData[1][2] = "no";
+
+        TriviaData[2][2] = "no";
+
+        TriviaData[3][2] = "no";
+
+        TriviaData[4][2] = "no";
+
+        TriviaData[5][2] = "no";
+
+        TriviaData[6][2] = "no";
+
+        TriviaData[7][2] = "no";
+
+        TriviaData[8][2] = "no";
+
+        TriviaData[9][2] = "no";
+
+        TriviaData[10][2] = "no";
+
+        TriviaData[11][2] = "no";
+ 
+
+        // Load first ?
+
+        setQuestion();
+
+ 
+
+        // Sets question text and indicator so that we know the question has been displayed
+        function setQuestion() {
+
+            selectionValid = false; 
+            while (selectionValid == false) {
+                currentQuestion = Math.floor(Math.random() * 12);
+                if (TriviaData[currentQuestion][2] == "no") {
+                    selectionValid = true;
+                }
+            }
+            document.getElementById("TriviaQuestion").innerHTML = TriviaData[currentQuestion][0];
+            TriviaData[currentQuestion][2] = "yes";
+            questionsAsked = questionsAsked + 1;
+        }
+        function processAnswer(myAnswer) {
+            if (TriviaData[currentQuestion][1] == myAnswer) {
+                // answer correct
+                totalCorrect = totalCorrect + 1;
+            }
+        }
+        //2-D array
+        function createTwoDimensionalArray(arraySize) {
+            for (i = 0; i < TriviaData.length; ++i)
+                TriviaData[i] = new Array(arraySize);
+        }
+
+ 
+
+        // checks the answer, updates correct total, select next ?
+        function checkAnswer() {
+            if (document.getElementById("RadioTrue").checked) {
+                processAnswer("true");
+            } else {
+                processAnswer("false");
+            }
+            // get next question if not asked all yet
+            if (questionsAsked < 12) {
+                setQuestion();
+            } else {
+                //final question with score
+                alert("Trivia over! You got " + totalCorrect + " correct out of 12.");
+                document.getElementById("ButtonContinue").disabled = true;
+            }//update
+            document.getElementById("NumberAsked").innerHTML = questionsAsked;
+            document.getElementById("NumberCorrect").innerHTML = totalCorrect;
+        }
+    </script>
+
+<!-- game done-->
+
+    <div id='calc-contain'>
+
+      <h5 class="w3-padding-48"><span class="w3-tag w3-wide">CALCULATOR</span></h5>
+  <!-- Calculator in HTML not JAVA -->
+          <form name="calculator">
+            <input type="text" name="answer" />
+            <br>
+            <input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+            <input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+            <input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+            <input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+            <br/>
+            <input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+            <input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+            <input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+            <input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+            </br>
+            <input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+            <input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+            <input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+            <input type="button" value=" x " onclick="calculator.answer.value += '*'" />
+            </br>
+            <input type="button" value=" c " onclick="calculator.answer.value = ''" />
+            <input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+            <input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+            <input type="button" value=" / " onclick="calculator.answer.value += '/'" />
+            </br>
+          </form>
+          <div id="agh">
+<!-- End Calculator-->
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+<br>
+<br>
+<br>
+<p>&#8512; HTML/CSS/C++ Website </p>
+    <address>
+        Email <a href="mailto:ealva3@uic.edu">Estefanie</a> with any questions
+    </address>
+</body>
+</html>
